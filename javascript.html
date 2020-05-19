@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic Arithmetic Calculator</title>
+
+    <style>
+
+        body{
+            background-color:black;
+            margin:0;
+            padding:0;
+        }
+
+        form{
+            background-color:rgb(21, 237, 245);
+            width:500px;
+            height:500px;
+            margin:auto;
+            margin-top:50px;
+            border-radius:50px; 
+        }
+
+        h1{
+            padding: 15% 20% 10%;
+            text-align:center;
+            color:rgb(248, 88, 88);
+            font-style:oblique;
+        }
+
+        .btn{
+            font-weight:bolder;
+            background-color:rgb(248, 106, 106);
+            font-size:30px;
+            color:whitesmoke;
+            width:70px;
+            height:50px;
+            border-radius:5%;
+            margin-top:5%;    
+        }
+
+        .btn:hover{
+            background-color:rgb(250, 40, 40);
+        }
+
+        .spacing{
+            margin:20px 50px;
+            padding-left:3%;
+        }
+
+        .left-spacing{
+            padding-left:15%;
+            font-size:20px;
+            color:brown;
+            font-weight:bolder;
+        }
+
+        input{
+            font-size:15px;
+            font-weight:bolder;
+            color:rgb(245, 60, 60);
+            text-align:center;
+            background-color:whitesmoke;
+            width:40%;
+            height:30px;
+        }
+
+        .copyright{
+            text-align:center;
+            color:whitesmoke;
+            font-weight:bold; 
+            font-size:15px;
+            padding-top:10%;
+        }
+    
+    </style>
+
+    <script type="text/javascript">
+
+    function sum(){
+        var num1 = +document.getElementById("num1").value;
+        var num2 = +document.getElementById("num2").value;
+        var sum = num1+num2;
+        alert(sum);
+    }
+    
+    function difference(){
+        var num1 = +document.getElementById("num1").value;
+        var num2 = +document.getElementById("num2").value;
+        var difference = num1-num2;
+        alert(difference);
+    }
+
+    function quotient(){
+        var num1 = +document.getElementById("num1").value;
+        var num2 = +document.getElementById("num2").value;
+        var quotient = num1/num2;
+        alert(quotient);
+    }
+
+    function product(){
+        var num1 = +document.getElementById("num1").value;
+        var num2 = +document.getElementById("num2").value;
+        var product = num1*num2;
+        alert(product);
+    }
+
+    function modulus(){
+        var num1 = +document.getElementById("num1").value;
+        var num2 = +document.getElementById("num2").value;
+        var modulus = num1%num2;
+        alert(modulus);
+    }
+    
+    </script>
+</head>
+<body>
+    <form>
+        <h1>Simple Arithmetic<br> Calculator</h1>
+        <div class="spacing top-spacing left">
+            <label>Num1</label>
+            <input type="number" placeholder="Type Num1" id="num1">
+        </div>
+        <div class="spacing left">
+            <label>Num2</label>
+            <input type="number" placeholder="Type Num2" id="num2">
+        </div>
+        <div class="spacing">
+            <input type="button" value="+" onclick="sum()" class="btn">
+            <input type="button" value="-" onclick="difference()" class="btn">
+            <input type="button" value="/" onclick="quotient()" class="btn">
+            <input type="button" value="*" onclick="product()" class="btn">
+            <input type="button" value="%" onclick="modulus()" class="btn">
+        </div>
+        <div class="copyright">Copyright @ 2020 ZukkyBest-Codex. All rights reserved.</div>
+    </form>
+    
+</body>
+</html>
